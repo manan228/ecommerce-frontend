@@ -17,7 +17,7 @@ const Store = () => {
     const getProducts = async () => {
       try {
         const response = await axios.get(
-          `http://http://54.167.109.212:3000//products/?page=${page}`
+          `http://54.167.109.212:3000/products/?page=${page}`
         );
 
         console.log(response);

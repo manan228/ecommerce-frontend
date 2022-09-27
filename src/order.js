@@ -8,7 +8,7 @@ const Order = () => {
   useEffect(() => {
     const getOrders = async () => {
       try {
-        const response = await axios.get("http://http://54.167.109.212:3000//orders");
+        const response = await axios.get("http://54.167.109.212:3000/orders");
 
         console.log(response);
 
