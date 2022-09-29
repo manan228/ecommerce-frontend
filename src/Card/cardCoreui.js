@@ -14,7 +14,7 @@ const Card = ({ products }) => {
 
   const onAddToCartClickHandler = async (prodId) => {
     try {
-      const response = await axios.post(`https://54.167.109.212:3000/cart/${prodId}`);
+      const response = await axios.post(`https://cors-everywhere.herokuapp.com/https://cors-everywhere.herokuapp.com/http://54.167.109.212:3000/cart/${prodId}`);
 
       console.log(response.data.response);
     } catch (err) {
