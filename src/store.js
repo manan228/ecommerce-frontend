@@ -17,7 +17,7 @@ const Store = () => {
     const getProducts = async () => {
       try {
         const response = await axios.get(
-          `https://cors-everywhere.herokuapp.com/http://54.167.109.212:3000/products/?page=${page}`
+          `https://cors-everywhere.herokuapp.com/http://54.242.9.172:3000/products/?page=${page}`
         );
 
         console.log(response);

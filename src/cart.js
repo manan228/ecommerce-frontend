@@ -9,7 +9,7 @@ const Cart = () => {
   useEffect(() => {
     const getCartProducts = async () => {
       try {
-        const response = await axios.get("https://cors-everywhere.herokuapp.com/http://54.167.109.212:3000/cart");
+        const response = await axios.get("https://cors-everywhere.herokuapp.com/http://54.242.9.172:3000/cart");
         console.log(response.data);
         setCartProducts(response.data);
       } catch (err) {
@@ -23,7 +23,7 @@ const Cart = () => {
   const onCheckoutClickHandler = async () => {
     try {
 
-      const response = await axios.post("https://cors-everywhere.herokuapp.com/http://54.167.109.212:3000/create-order")
+      const response = await axios.post("https://cors-everywhere.herokuapp.com/http://54.242.9.172:3000/create-order")
 
       console.log(response)
     } catch (err) {
