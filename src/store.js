@@ -17,10 +17,9 @@ const Store = () => {
     const getProducts = async () => {
       try {
         const response = await axios.get(
-          `https://cors-everywhere.herokuapp.com/http://54.242.9.172:3000/products/?page=${page}`
+          `http://localhost:3000/products/?page=${page}`
         );
 
-        console.log(response);
         paginationData = response.data.paginationData;
         setProducts(response.data.response);
       } catch (err) {

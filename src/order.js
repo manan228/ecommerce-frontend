@@ -8,11 +8,20 @@ const Order = () => {
   useEffect(() => {
     const getOrders = async () => {
       try {
-        const response = await axios.get("https://cors-everywhere.herokuapp.com/http://54.167.109.212:3000/orders");
+        const response = await axios.get("http://localhost:3000/orders");
 
-        console.log(response);
+        const retreivedProducts =
+          response.data[response.data.length - 1].products;
 
-        setOrderProducts(response.data[0].products);
+        const orderObj = {
+          id: retreivedProducts[0].id,
+          imageUrl: retreivedProducts[0].imageUrl,
+          name: retreivedProducts[0].name,
+          unitPrice: retreivedProducts[0].unitPrice,
+          quantity: retreivedProducts[0].orderItem.quantity,
+        };
+
+        setOrderProducts([orderObj]);
       } catch (err) {
         console.log(err);
       }
